@@ -1,0 +1,8 @@
+<div class="divTableRow">
+  <div class="divTableCell"><%= payment.payment_id %></div>
+  <div class="divTableCell"><%= payment.payment_type%></div>
+  <div class="divTableCell"><%= payment.bank.name %></div>
+  <div class="divTableCell"><%= payment.party.name%></div>
+  <div class="divTableCell"><%= number_to_currency(payment.amount, unit: "Ksh ", separator: ".", delimiter: ",") %></div>
+  <div class="divTableCell"><%= payment.transaction_date.to_formatted_s(:short) %></div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container d-flex flex-column">
+  <div class="row align-items-center justify-content-center
+          min-vh-100">
+    <div class="col-12 col-md-8 col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="mb-4">
+            <h5>Forgot Password?</h5>
+            <p class="mb-2">Enter your registered email ID to reset the password
+            </p>
+          </div>
+          <form>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <div class="mb-3">
+                <%= f.label :email, class: "form-label" %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter your email" %>
+              </div>
+              <div class="mb-3 d-grid">
+                <%= f.submit "Reset Password", class: 'btn btn-primary' %>
+              </div>
+              <span>Don't have an account? 
+                <%= link_to "Sign In", :user_session %>
+              </span>
+            <%end%>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
