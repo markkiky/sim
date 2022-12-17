@@ -1,0 +1,26 @@
+<%= form_with(model: @text, id: dom_id(@text, "form"), class: "table min-w-full") do |form| %>
+  <div class="border border-sky-500">
+    <%= form.text_area :message, placeholder:"Paste Message",
+     class: "block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
+      rows: 5, columns: 6%>
+    <%= inline_error_for(:message, @text) %>
+  </div>
+  <div>
+    <%= form.text_field :message_hash, class: "block rounded-md border border-gray-200 outline-none px-3 py-2  w-full", disabled: true %>
+    <%= inline_error_for(:message_hash, @text) %>
+  </div>
+  <div>
+    <%= form.date_field :message_date, class: "block rounded-md border border-gray-200 outline-none px-3 py-2  w-full datefield" %>
+    <%= inline_error_for(:message_date, @text) %>
+  </div>
+  <div>
+    <%= form.check_box :is_processed,
+      class: "w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+    %>
+  </div>
+  <div class="inline">
+    <%= button_tag(type: "submit") do%>
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    <%end%>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<%= turbo_frame_tag text do %>
+  <div class="table min-w-full">
+    <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= text.message %></div>
+    <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= text.message_hash %></div>
+    <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= text.message_date %></div>
+    <div><span class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">Red</span></div>
+    <div>
+      <%= button_tag(type: "submit") do%>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+      <%end%>
+    </div>
+  </div>
+</div>
+<% end %>

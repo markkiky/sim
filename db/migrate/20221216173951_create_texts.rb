@@ -5,6 +5,8 @@ class CreateTexts < ActiveRecord::Migration[7.0]
       t.bigint :bank_id
       t.string :message
       t.string :message_hash
+      t.datetime :message_date, default: DateTime.now
+      t.boolean :is_processed
       t.json :data
 
       t.timestamps

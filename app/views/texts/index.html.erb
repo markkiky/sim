@@ -1,0 +1,19 @@
+<div class="w-full">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Text Messages</h1>
+  </div>
+  <div class="min-w-full my-8">
+    <div class="table font-bold min-w-full grid grid-cols-5 gap-5">
+      <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Message</div>
+      <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Crypted</div>
+      <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Date</div>
+      <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Processed</div>
+      <div class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Actions</div>
+      <div></div>
+    </div>
+    <%= turbo_frame_tag "new-text-form", src: new_text_path %>
+    <div id="texts" >
+      <%= render @texts %>
+    </div>
+  </div>
+</div>

@@ -8,4 +8,4 @@ import "./src/jquery"
 import "./src/highcharts"
 
 
-import "./channels"
+// import "./channels"

@@ -47,6 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_173951) do
     t.bigint "bank_id"
     t.string "message"
     t.string "message_hash"
+    t.datetime "message_date", default: "2022-12-16 23:48:21"
+    t.boolean "is_processed"
     t.json "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

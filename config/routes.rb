@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root to: redirect('/avo')
+  root to: 'texts#index'
   scope module: 'api' do
     # Payments
     post '/api/payments', to: 'payments#create'
