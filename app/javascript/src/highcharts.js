@@ -22,8 +22,8 @@ $(function () {
             type: 'column'
         },
         title: {
-            align: 'left',
-            text: 'Annual Payment Report.'
+            align: 'center',
+            text: undefined
         },
         subtitle: {
             align: 'left',

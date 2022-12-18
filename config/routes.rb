@@ -6,14 +6,19 @@ Rails.application.routes.draw do
   authenticate :user do
     match '/delayed_job' => DelayedJobWeb, :anchor => false, :via => %i[get post]
     mount Avo::Engine, at: Avo.configuration.root_path
-    get '/', to: 'dashboard#index'
     resources :payments
     resources :texts
+
+    scope namespace: 'app' do
+      get '/app/dashboard', to: 'dashboard#dashboard'
+      resources :payments
+      resources :texts
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root to: 'texts#index'
+  root to: redirect('/app/dashboard')
   scope module: 'api' do
     # Payments
     post '/api/payments', to: 'payments#create'

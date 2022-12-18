@@ -7,5 +7,6 @@ import * as bootstrap from "bootstrap"
 import "./src/jquery"
 import "./src/highcharts"
 
+import "../assets/javascript/argon-dashboard-tailwind"
 
 // import "./channels"
